@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace TestsProject
 {
     public class ExampleService
     {
-        public int FilterPositiveNumbers(List<int> numbers)
+        public List<int> FilterPositiveNumbers(List<int> numbers)
         {
-            return 0;
+            return numbers.Where(x => x % 2 == 0).ToList();
         }
     }
 }
